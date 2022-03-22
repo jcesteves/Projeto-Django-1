@@ -1,0 +1,14 @@
+{% extends 'global/base.html' %}
+
+{% block main-content %}
+<div class="main-content main-content-list container">
+    {% for recipe in recipes %}
+        {% include 'partials/recipe.html' %}
+    {% empty %}
+        <div class="center">
+            <h1>Não existem receitas cadastradas ou ainda não foram publicadas. 😥</h1>
+        </div>
+    {% endfor %}    
+</div>
+{% endblock main-content %}
+
